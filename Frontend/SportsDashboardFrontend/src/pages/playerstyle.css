@@ -1,0 +1,95 @@
+/* Layout for both boxes side-by-side */
+.stat.grids {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* keeps it responsive */
+  margin-top: 2rem;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Shared minimalist card style */
+.ranking-box,
+.players-box {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ranking-box:hover,
+.players-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Titles */
+.ranking-title,
+.players-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Ranking colors */
+.wins {
+  color: #1a7f37; /* green */
+}
+
+.losses {
+  color: #c0392b; /* red */
+}
+
+.pct {
+  color: #0070f3; /* blue */
+}
+
+.gb {
+  color: #6c63ff; /* purple */
+}
+
+/* Players grid inside box */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+/* Player card (clickable) */
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fafafa;
+  padding: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: all 0.2s ease;
+}
+
+.player-card:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.03);
+  border-color: #d0d0d0;
+}
+
+/* Player text styles */
+.player-name {
+  font-weight: 600;
+  color: #0070f3;
+  margin-bottom: 4px;
+}
+
+.player-position {
+  font-size: 0.9rem;
+  color: #555;
+}
