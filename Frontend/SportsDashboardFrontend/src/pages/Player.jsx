@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import "./playerstyle.css";
 
 export default function Player() {
+  let teamName = "Portland Trailblazers";
   return (
     <div>
-      <h1>Hello, world!</h1>
-      <p>Welcome to the Player page.</p>
+      <h1 className="team name">{teamName}</h1>
       <div className="stat grids">
         <RankingComponent />
         <PlayersComponent />
